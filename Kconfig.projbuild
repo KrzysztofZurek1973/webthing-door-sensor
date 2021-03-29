@@ -1,0 +1,14 @@
+menu "Open Sensor"
+		
+config GPIO_SENSOR_INPUT
+	int "GPIO_SENSOR_INPUT: GPIO number for motion input"
+	range 0 34
+	default 18
+	help
+		This constant will be visible for compiler as CONFIG_GPIO_A.
+		
+		Some GPIOs are used for other purposes (flash connections, etc.) and cannot be used.
+
+		GPIOs 35-39 are input-only so cannot be used to drive the led.
+
+endmenu
